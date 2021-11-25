@@ -174,19 +174,16 @@ if (!isset($_SESSION['username'])) {
                                             <td><?=$data['keterangan']?></td>
                                             <?php
                                             if ($_SESSION['role'] == 'admin'){
-                                            echo <<< HereDocString
-                                            <td>
-                                            <i class="fas fa-edit iconedit" style="padding-left: 9px;" type="button"
-                                                    data-toggle="modal" data-target=
-                                                    "#edit">
-                                            </i>
-                                            <i class="material-icons icondelete" style="padding-left: 8px;"
-                                                type="button" data-toggle="modal"
-                                                data-target="#deletemas">delete</i>
-                                            </td>
-                                            HereDocString;
-                                            }
                                             ?>
+                                            <td>
+                                                <i class="fas fa-edit iconedit" style="padding-left: 9px;" type="button"
+                                                    data-toggle="modal" data-target="#edit<?=$data['karyawan_id']?>">
+                                                </i>
+                                                <i class="material-icons icondelete" style="padding-left: 8px;"
+                                                    type="button" data-toggle="modal"
+                                                    data-target="#deletemas<?=$data['karyawan_id']?>">delete</i>
+                                            </td>
+                                            <?php } ?>
                                         </tr>
                                         <div class="modal fade" id="edit<?=$data['karyawan_id']?>" tabindex="-1"
                                             role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
